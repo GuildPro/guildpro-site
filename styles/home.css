@@ -101,6 +101,8 @@ body {
   margin-left: auto;
   width: 90%;
   column-gap: 90px;
+  height: 100%;
+  margin-top: 5%;
 }
 
 .feature {
