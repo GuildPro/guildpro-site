@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('./theme.css');
+
+body {
+  font-family: 'Lato';
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+#brand-name {
+  font-weight: 900;
+}
+
+.nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.nav p > a {
+  text-decoration: none;
+  color: var(--text-color-main);
+  font-weight: 600;
+}
+
+.current {
+  color: var(--text-color-highlight) !important;
+  font-weight: 900 !important;
+}
+
+.mode {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discord {
+  color: var(--text-color-main);
+  width: 210px;
+  height: 40px;
+  padding: 20px;
+  outline: none;
+  border: 2px solid var(--text-color-main);
+  font-weight: 600;
+  border-radius: 12px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.discord i {
+  margin-right: 10px;
+}
+
+.hero,
+.hero h1 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bolder !important;
+  font-size: 60px;
+}
+
+.hero span {
+  font-weight: bolder;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  column-gap: 90px;
+}
+
+.feature {
+  /* text-align: ; */
+  flex: 1 0 30%;
+  max-width: 500px;
+  width: 30%;
+  margin-bottom: 50px;
+}
+
+.feature-icon i {
+  font-size: 60px;
+}
+
+.feature-title {
+  color: var(--text-color-main);
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: var(--text-color-secondary);
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  color: var(--text-color-secondary);
+  text-align: center;
+  width: 100%;
+  font-size: 0.75em;
+}
+
+.footer > a {
+  color: var(--text-color-highlight);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.footer > a:hover {
+  text-decoration: underline;
+}
+
+.feature:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.feature:not(:hover) {
+  transform: scale(1);
+  transition: 0.5s;
+}

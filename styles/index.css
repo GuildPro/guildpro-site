@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('./theme.css');
+
+.mode-switcher:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: scale(1.1);
+  transform: rotate(30deg);
+}
+
+.mode-switcher:not(:hover) {
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+/* center the card-container class in the middle of the page */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  margin-bottom: auto;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  cursor: url('../assets/cursors/welcoming.png'), auto;
+}
+
+/* .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+} */
+
+.card {
+  background-color: var(--background-secondary);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  width: 700px;
+  max-width: 80%;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  vertical-align: middle;
+
+  border-radius: 50px;
+}
+
+.name {
+  width: 50%;
+  text-align: left;
+}
+
+.name h1 {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.name h3 {
+  font-weight: bold;
+  width: 40%;
+  text-align: left;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  margin-top: -10%;
+  margin-left: 13%;
+}
+
+.logo {
+  width: 50%;
+  text-align: center;
+}
+
+.logo img {
+  width: 60%;
+  text-align: right;
+}
+
+.arrow {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin-top: 10%;
+  animation: clickMe 1s infinite;
+}
+
+.arrow span {
+  cursor: pointer;
+}
+
+@keyframes clickMe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.13);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* .hero,
+.hero h1 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bolder !important;
+  font-size: 60px;
+}
+
+.hero span {
+  font-weight: bolder;
+} */
+
+@media screen and (max-width: 850px) {
+  .card {
+    background-color: var(--background-secondary);
+    padding: 20px;
+    width: 700px;
+    max-width: 80%;
+    min-height: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    vertical-align: middle;
+
+    border-radius: 50px;
+  }
+
+  .name {
+    width: 100%;
+    text-align: center;
+  }
+  .logo {
+    width: 100%;
+  }
+
+  .logo img {
+    max-width: 200px;
+    min-width: 25%;
+  }
+
+  .name h1 {
+    width: 100%;
+    font-size: 52px;
+  }
+
+  .name h3 {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -7%;
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+.logo img {
+  animation: fadeIn 1s forwards;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.slidingOut {
+  animation: nextPage 1s forwards;
+}
+
+.recover {
+  animation: recoverHero 1s forwards;
+}
+
+.recoverPage {
+  animation: recoverHeroPage2 1s forwards;
+}
+
+.slidingIn {
+  animation: slideIn 1s forwards;
+}
+
+.fadeContentIn {
+  animation: fadeContentIn 1s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeContentIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes recoverHero {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes recoverHeroPage2 {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes nextPage {
+  from {
+    transform: translateY(-100vh);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: translateY(-100vh);
+    /* opacity: 0;
+    visibility: hidden; */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+    visiblity: hidden;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.scroll {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* .home-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+} */

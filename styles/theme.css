@@ -1,0 +1,64 @@
+:root {
+  /* javascript only */
+  --background-color-light: #eeeeee;
+  --background-secondary-light: #e1e1e1;
+  --text-color-main-light: #181818;
+  --text-color-secondary-light: #4e4d4d;
+  --landing-image-light: url(../assets/guildpro_logos/logo-landing-light.png);
+  --header-image-light: url(../assets/guildpro_logos/logo-main-light.png);
+  --mode-switcher-to-light: brightness_3;
+
+  --background-color-dark: #272727;
+  --background-secondary-dark: #2e2e2e;
+  --text-color-main-dark: #ffffff;
+  --text-color-secondary-dark: #acacac;
+  --mode-switcher-to-dark: light_mode;
+
+  /* default styles */
+  --background-color: #272727;
+  --background-secondary: #2e2e2e;
+  --text-color-main: #ffffff;
+  --text-color-secondary: #acacac;
+  --text-color-highlight: #c780e0;
+  --brand-gradient-down: linear-gradient(180deg, #cb783b 6%, #a63bcb 94%);
+  --brand-graident-right: linear-gradient(90.01deg, #cb783b 68.92%, #b85985 77.69%, #a63bcb 86.09%);
+
+  --landing-image: url(../assets/guildpro_logos/logo-landing-dark.png);
+  --header-image: url(../assets/guildpro_logos/logo-main-dark.png);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color-main);
+  user-select: none;
+  overflow: hidden;
+}
+
+.gradient-down-text {
+  background: var(--brand-gradient-down);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-right {
+  background: var(--brand-graident-right);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mode-switcher:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: scale(1.1);
+  transform: rotate(30deg);
+}
+
+.mode-switcher:not(:hover) {
+  transition: all 0.5s;
+  transform: scale(1);
+}
