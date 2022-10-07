@@ -6,7 +6,6 @@ let theme = localStorage.getItem('theme') || 'dark';
 if (!theme && theme != 'light') localStorage.setItem('theme', 'dark');
 
 setTheme(theme);
-location.reload();
 
 function setTheme(th) {
   let rootStyle = getComputedStyle(root);
