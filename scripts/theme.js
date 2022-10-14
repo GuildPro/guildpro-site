@@ -1,7 +1,6 @@
 let root = document.querySelector(':root');
 
 let themeSwitcher = document.querySelector('.mode-switcher');
-// let localStorage = window.localStorage;
 let theme = localStorage.getItem('theme') || 'dark';
 if (!theme && theme != 'light') localStorage.setItem('theme', 'dark');
 
